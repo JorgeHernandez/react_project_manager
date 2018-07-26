@@ -23,9 +23,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      Project manager
-      <br />
-      <Projects projects={this.state.projects} />
+        Project manager
+        <hr />
+        <Projects projects={this.state.projects} />
       </div>
     );
   }
