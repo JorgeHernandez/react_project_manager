@@ -7,6 +7,13 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
+      projects: []
+    }
+  }
+
+  componentWillMount(){
+    console.log('mounted');
+    this.state = {
       projects: [{
         title: "business website",
         category: "web design"
