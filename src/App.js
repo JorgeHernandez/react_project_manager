@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Projects from './components/projects';
+import AddProject from './components/addProject';
 
 class App extends Component {
   constructor(){
@@ -9,9 +10,7 @@ class App extends Component {
       projects: []
     }
   }
-
   componentWillMount(){
-    console.log('mounted');
     this.setState(()=>{
       return {projects: [{
         title: "business website",
@@ -25,12 +24,12 @@ class App extends Component {
       }]}
     })
   }
-
   render() {
     return (
       <div className="App">
         Project manager
         <hr />
+        <AddProject />
         <Projects projects={this.state.projects} />
       </div>
     );
