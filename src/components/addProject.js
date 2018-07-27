@@ -25,8 +25,8 @@ class AddProject extends Component {
           category: this.refs.category.value
         }
       },()=>{
-        console.log(this.state);
-        //this.props.addProject(newProject);
+        //callback
+        this.props.addProject(this.state.newProject);
       })
     }
   }

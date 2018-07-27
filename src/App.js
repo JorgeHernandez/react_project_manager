@@ -24,12 +24,18 @@ class App extends Component {
       }]}
     })
   }
+  handleNewProject(project) {
+    let projects = this.state.projects;
+    projects.push(project);
+    this.setState({projects: projects});
+    return;
+  }
   render() {
     return (
       <div className="App">
         Project manager
         <hr />
-        <AddProject />
+        <AddProject addProject={this.handleNewProject.bind(this)} />
         <Projects projects={this.state.projects} />
       </div>
     );
