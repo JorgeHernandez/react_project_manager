@@ -11,7 +11,7 @@ class ProjectItem extends Component {
       <li className="Projects">
           <b>{this.props.project.title}:</b>
           {this.props.project.category}
-          <a href="#" onClick={this.deleteProyect.bind(this, this.props.project.id)}>X</a>
+          <a href="#" className="delete" onClick={this.deleteProyect.bind(this, this.props.project.id)}>X</a>
       </li>
     );
   }
