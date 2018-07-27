@@ -3,7 +3,6 @@ import './App.css';
 import Projects from './components/projects';
 
 class App extends Component {
-
   constructor(){
     super();
     this.state = {
@@ -13,8 +12,8 @@ class App extends Component {
 
   componentWillMount(){
     console.log('mounted');
-    this.state = {
-      projects: [{
+    this.setState(()=>{
+      return {projects: [{
         title: "business website",
         category: "web design"
       },{
@@ -23,8 +22,8 @@ class App extends Component {
       },{
         title: "ecommerce shopping cart",
         category: "web development"
-      }]
-    }
+      }]}
+    })
   }
 
   render() {
